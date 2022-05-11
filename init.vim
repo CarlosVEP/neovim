@@ -26,7 +26,8 @@ set guioptions-=L
 "Get out of insert mode 
 "Salir de modo insertar
 imap jk <Esc>
-imap <C-c> <Esc>l
+"imap <C-c> <Esc>l
+"imap <Esc>l
 "mueve bloques de codigo en modo visual o V-Line
 "Moves Blocks of code in visual mode or V-Line xnoremap K :move '<-2<CR>gv-gv xnoremap J :move '>+1<CR>gv-gv 
 xnoremap K :move '<-2<CR>gv-gv
@@ -46,23 +47,31 @@ source ~/AppData/Local/nvim/themes/onedark.vim
 nmap <leader>w :w <CR>
 "cerrar ventana
 "close current  window
-nmap <C-w> :q <CR>
+"nmap <C-w> :q <CR>
 nmap <leader>q :q <CR>
 nmap <leader>so :so%<CR>
 "search commands 
 "comandos de busqueda
-nmap <leader>gs  :CocSearch
-nmap <leader>fs :FZF<CR>
+nmap <leader>cs  :CocSearch
+nmap <leader>fz :FZF<CR>
 nmap <leader>rg :Rg<CR>
+"Terminal powershell
+nmap <leader>pw :silent !start powershell<CR>
+"Terminal cmd en split
+nmap <leader>tr :sp<BAR>term<CR><c-w>J:resize10<CR>
 "configuracion de tabs
 let g:indentLine_enabled = 1
 let g:indentLine_char = '▏'
 let g:indentLine_faster = 1
 let g:indentLine_fileTypeExclude=["nerdtree"]
 
+"Diagnostic
+nnoremap <leader>kp :let @*=expand("%")<CR>
 "abrir Nerdtree
 "open nerdtree
-nmap <Leader>e :NERDTree<CR>
+"nmap <Leader>nt :NERDTree<CR>
+nmap <Leader>nf :NERDTreeFind<CR>
+nmap <Leader>nt :NERDTreeToggle<CR>
 
 "open cocExplorer 
 "Buscar dos carácteres con easymotion
