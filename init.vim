@@ -65,7 +65,7 @@ let g:indentLine_char = '▏'
 let g:indentLine_faster = 1
 let g:indentLine_fileTypeExclude=["nerdtree"]
 
-"Diagnostic
+"Para copiar en el portapapeles la ruta del archivo que se esta editando
 nnoremap <leader>kp :let @*=expand("%")<CR>
 "abrir Nerdtree
 "open nerdtree
